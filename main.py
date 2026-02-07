@@ -3,13 +3,16 @@ dubai = 150_000
 bali = 400_000
 
 dist = input("Введите пунк поездки (china, dubai, bali): ")
-count = int(input("Введите количество людей:  "))
+adults = int(input("Введите количество взрослых:  "))
+kids = int(input("Введите количество детей:  "))
 
 if dist == "china":
-    price = china * count
+    dist_price = china
 elif dist == "dubai":
-    price = dubai * count
+    dist_price = dubai
 else:
-    price = bali * count
+    dist_price = bali
 
-print("Цена поездки: ", price)
+
+total =  dist_price * (2 * adults + kids) // 2
+print("Цена поездки: ", total)
